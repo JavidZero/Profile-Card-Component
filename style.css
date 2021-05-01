@@ -1,0 +1,164 @@
+:root {
+    /*Primary*/
+
+    --dark-cyan: hsl(185, 75%, 39%);
+    --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --dark-grayish-blue: hsl(227, 10%, 46%);
+
+    /* Neutral */
+
+    --dark-gray: hsl(0, 0%, 59%);
+}
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.8rem;
+    width: 100%;
+    min-height: 100vh;
+    padding: 2rem;
+    background-color: var(--dark-cyan);
+    font-family: 'Rubik', sans-serif;
+
+    overflow: hidden;
+}
+
+.container {
+    max-width: 144rem;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+.container::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+
+    background-image: url("images/bg-pattern-top.svg");
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: auto 100%;
+
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    z-index: 100;
+
+}
+
+.container::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+
+    background-image: url("images/bg-pattern-top.svg");
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: auto 100%;
+
+    position: absolute;
+    bottom: -50%;
+    right: -50%;
+
+    z-index: 200;
+}
+
+.container >* {
+    position: relative;
+    z-index: 10000;
+}
+
+.card {
+    max-width: 35rem;
+    width: 100%;
+    height: 40rem;
+    background-color: white;
+    border: none;
+    border-radius: 15px;
+}
+
+.card__top {
+    background-image: url("images/bg-pattern-card.svg");
+    width: 100%;
+    height: 15rem;
+    border-radius: 15px 15px 0 0;
+}
+
+.card__img {
+    width: 10rem;
+    height: 10rem;
+    position: relative;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+    border: 7px solid white;
+}
+
+.card__img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 1px transparent white;
+}
+
+.card__bottom {
+    width: 100%;
+    height: 25rem;
+    padding: 6rem 3rem 1rem 3rem;
+    text-align: center;
+}
+
+.line {
+    width: calc(100% + 6rem);
+    height: 1px;
+    background-color: black;
+    opacity: .1;
+    transform: translateX(-3rem);
+    margin: 3rem 0;
+}
+
+.card__socials {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
+    height: 10rem;
+}
+
+.card__name {
+    margin-bottom: 1rem;
+}
+
+.social__numb {
+    margin-bottom: .7rem;
+}
+
+h3 {
+    color: var(--very-dark-desaturated-blue);
+}
+
+h3 span,
+h5,
+h6 {
+    font-weight: 300;
+    color: var(--dark-grayish-blue);
+}

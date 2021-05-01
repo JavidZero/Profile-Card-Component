@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <title>Profile Card Component</title>
+
+  <style>
+    .front-end{
+      width: 100vw;
+      height: 30px;
+      background-color: black;
+      position: absolute;
+      bottom: 0%;
+      right: 0%;
+    }
+    .attribution { font-size: 11px; text-align: center; 
+      color: white;
+      position: absolute;
+      top: 50%;left: 50%;
+    transform: translate(-50%,-50%);}
+    .attribution a, 
+    .attribution span { color: hsl(227, 45%, 77%); }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <div class="card">
+      <div class="card__top">
+        <div class="card__img">
+          <img src="images/image-victor.jpg" alt="">
+        </div>
+      </div>
+
+      <div class="card__bottom">
+        <div class="card__info">
+          <h3 class="card__name">Victor Crest <span>&nbsp 26</span></h3>
+          <h5 class="card__city">London</h5>
+        </div>
+        
+        <div class="line"></div>
+
+        <div class="card__socials">
+
+          <div class="social">
+            <h3 class="social__numb">80K</h3>
+            <h6 class="social__name">Followers</h6>
+          </div>
+
+          <div class="social">
+            <h3 class="social__numb">803K</h3>
+            <h6 class="social__name">Likes</h6>
+          </div>
+
+          <div class="social">
+            <h3 class="social__numb">1.4K</h3>
+            <h6 class="social__name">Photos</h6>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    
+  </div>
+
+  <footer class="front-end">
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <span>Javid Alizada</span>.
+    </p>
+  </footer> 
+</body>
+</html>
